@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Form Container */
+.container {
+    position: relative;
+    max-width: 400px; 
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1;
+    margin-top: 11%;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.form-toggle button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    color: #ff4400;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.form-toggle button.active {
+    border-bottom: 2px solid #ff4400;
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.form-container h1 {
+    color: #ff4400;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.login-form, .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form label, .signup-form label {
+    font-size: 14px;
+    color: #ff4400;
+    text-align: left;
+}
+
+.login-form input, .signup-form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #222;
+    color: #ccc;
+    outline: none;
+}
+
+.login-form input:focus, .signup-form input:focus {
+    border-color: #ff4400;
+}
+
+.login-form button, .signup-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ff4400;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover, .signup-form button:hover {
+    background-color: #e63900;
+}
+
+.close-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #ff4400;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 2;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #e63900;
+}
